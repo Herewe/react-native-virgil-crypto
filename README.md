@@ -1,3 +1,30 @@
+# IMPORTANT
+
+For ios:
+1. remove Flipper, depends on the RN version, but for 0.69.2 you need to comment out this lane in Podfile:
+    \# :flipper_configuration => FlipperConfiguration.enabled,
+2. add use_frameworks!:
+target 'tsCvirgil_crypto' do
+  use_frameworks!
+or even
+  use_frameworks! :linkage => :static
+in case if some problems occur during building
+Also dont forget to "pod install" each time you change Podfile.
+
+
+DOESNT WORK WITH DEBUGGER
+
+
+In case of the error: ld: -U and -bitcode_bundle (Xcode setting ENABLE_BITCODE=YES) cannot be used together
+see https://stackoverflow.com/questions/73014763/react-native-ios-xcode-build-failing-for-bitcode
+https://github.com/mikehardy/rnfbdemo/issues/10
+
+
+
+
+
+
+
 # React Native Virgil Crypto
 
 [![npm](https://img.shields.io/npm/v/react-native-virgil-crypto.svg)](https://www.npmjs.com/package/react-native-virgil-crypto)
