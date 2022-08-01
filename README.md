@@ -8,11 +8,11 @@ For ios:
 target 'tsCvirgil_crypto' do
   use_frameworks!
 ```
-or even
+or even this, in case if some problems occur during building
 ```
   use_frameworks! :linkage => :static
 ```
-in case if some problems occur during building
+
 Also dont forget to "pod install" each time you change Podfile.
 
 
