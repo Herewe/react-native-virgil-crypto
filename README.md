@@ -4,10 +4,14 @@ For ios:
 1. remove Flipper, depends on the RN version, but for 0.69.2 you need to comment out this lane in Podfile:
     \# :flipper_configuration => FlipperConfiguration.enabled,
 2. add use_frameworks!:
+```
 target 'tsCvirgil_crypto' do
   use_frameworks!
+```
 or even
+```
   use_frameworks! :linkage => :static
+```
 in case if some problems occur during building
 Also dont forget to "pod install" each time you change Podfile.
 
